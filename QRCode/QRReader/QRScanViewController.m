@@ -252,8 +252,8 @@
     self.bottomBackground.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
     [self.view addSubview:self.bottomBackground];
     
-    NSString *websitePrefix = @"仅支持在电脑浏览器编写，请访问网址并扫码\n";
-    NSString *websiteSuffix = @"www.baidu.com";
+    NSString *websitePrefix = @"在电脑浏览器打开，请访问网址并扫码\n";
+    NSString *websiteSuffix = @"https://github.com/MoYingD";
     NSString *websiteText = [NSString stringWithFormat:@"%@%@", websitePrefix, websiteSuffix];
     NSMutableAttributedString *websiteAttributedText = [[NSMutableAttributedString alloc] initWithString:websiteText];
     [websiteAttributedText addAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor], NSFontAttributeName : FONT_WITH_SIZE(16)}
@@ -443,6 +443,7 @@
     
 }
 
+// 处理识别出的二维码内容
 - (void)sendScanQRCodeRequest:(NSString *)qrCode
 {
     MDLog(@"code is %@", qrCode);
